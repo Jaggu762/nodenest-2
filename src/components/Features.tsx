@@ -35,18 +35,18 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-20 px-4 bg-white">
+    <section id="features" className="py-20 px-4 bg-white dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="p-8 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition bg-gradient-to-br from-slate-50 to-white">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="text-blue-600" size={24} />
+              <div key={index} className="p-8 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg transition bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-800">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center mb-4">
+                  <Icon className="text-blue-600 dark:text-blue-400" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{feature.title}</h3>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{feature.description}</p>
               </div>
             );
           })}
