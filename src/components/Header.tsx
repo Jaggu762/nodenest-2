@@ -48,16 +48,18 @@ export function Header({ darkMode, setDarkMode }: HeaderProps) {
             <a href="#features" className="block py-2 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Features</a>
             <a href="https://docs.ankitgupta.com.np" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Documentation</a>
             <a href="https://discord.gg/ZaEdTBs7Ds" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Discord</a>
-            <div className="pt-4 flex flex-col gap-3">
+            <div className="pt-4 space-y-3">
               <button
                 onClick={() => setDarkMode(!darkMode)}
-                className="px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition font-medium flex items-center justify-center gap-2"
+                className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition font-medium flex items-center justify-center gap-2"
               >
                 {darkMode ? <Sun size={20} /> : <Moon size={20} />}
                 <span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
               </button>
-              <a href="https://panel.ankitgupta.com.np" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium text-center">Panel Access</a>
-              <a href="https://store.ankitgupta.com.np" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium text-center">Dashboard</a>
+              <div className="flex gap-3">
+                <a href="https://panel.ankitgupta.com.np" className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium text-center">Panel Access</a>
+                <a href="https://store.ankitgupta.com.np" className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium text-center">Dashboard</a>
+              </div>
             </div>
           </nav>
         )}
