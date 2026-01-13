@@ -1,7 +1,6 @@
 {
   "name": "nodenest-2-worker",
   "compatibility_date": "2026-01-13",
-  "main": null, // No entry point is needed for a static site build
   "assets": {
     "directory": "./dist"
   }
